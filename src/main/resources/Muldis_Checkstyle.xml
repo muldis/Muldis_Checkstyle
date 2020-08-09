@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC
+          "-//Checkstyle//DTD Checkstyle Configuration 1.3//EN"
+          "https://checkstyle.org/dtds/configuration_1_3.dtd">
+
+<module name="Checker">
+    <property name="charset" value="UTF-8"/><!-- Factory is "UTF-8". -->
+    <property name="fileExtensions" value=""/><!-- Factory is "" = all files. -->
+    <property name="severity" value="error"/><!-- Factory is "error". -->
+    <property name="tabWidth" value="4"/><!-- Factory is "8". -->
+
+    <module name="SuppressWarningsFilter"/>
+
+    <!-- HEADERS -->
+    <!-- Deliberately excluding module: <module name="Header"/> -->
+    <!-- Deliberately excluding module: <module name="RegexpHeader"/> -->
+
+    <!-- JAVADOC COMMENTS -->
+    <!-- Deliberately excluding module: <module name="JavadocPackage"/> -->
+
+    <!-- MISCELLANEOUS -->
+    <module name="NewlineAtEndOfFile">
+        <property name="lineSeparator" value="lf"/><!-- Factory is "lf_cr_crlf". -->
+    </module>
+    <module name="OrderedProperties"/>
+    <module name="Translation"/>
+    <module name="UniqueProperties"/>
+
+    <!-- REGEXP -->
+    <!-- Deliberately excluding module: <module name="RegexpMultiline"/> -->
+    <!-- Deliberately excluding module: <module name="RegexpOnFilename"/> -->
+    <!-- Deliberately excluding module: <module name="RegexpSingleline"/> -->
+
+    <!-- SIZE VIOLATIONS -->
+    <module name="FileLength"/>
+    <module name="LineLength">
+        <property name="max" value="100"/><!-- Factory is "80". -->
+    </module>
+
+    <!-- WHITESPACE -->
+    <module name="FileTabCharacter">
+        <property name="eachLine" value="true"/><!-- Factory is "false". -->
+    </module>
+    <module name="RegexpSingleline">
+        <property name="id" value="RegexpSingleline_NoLineTrailingWhitespace"/>
+        <property name="format" value="\s+$"/>
+        <property name="message" value="Line has trailing whitespace."/>
+    </module>
+
+    <module name="TreeWalker">
+        <property name="fileExtensions" value="java"/><!-- Factory is "java". -->
+
+        <module name="SuppressWarningsHolder"/>
+
+        <!-- ANNOTATIONS -->
+        <module name="AnnotationLocation"/>
+        <!-- Deliberately excluding module: <module name="AnnotationOnSameLine"/> -->
+        <module name="AnnotationUseStyle">
+            <property name="closingParens" value="never"/><!-- Factory is "never". -->
+            <property name="elementStyle" value="compact"/><!-- Factory is "compact_no_array". -->
+            <property name="trailingArrayComma" value="ignore"/><!-- Factory is "never". -->
+        </module>
+        <module name="MissingDeprecated"/>
+        <module name="MissingOverride"/>
+        <module name="PackageAnnotation"/>
+
+        <!-- BLOCK CHECKS -->
+        <module name="AvoidNestedBlocks"/>
+        <module name="EmptyBlock">
+            <property name="option" value="statement"/><!-- Factory is "statement". -->
+            <property name="tokens" value="
+                LITERAL_WHILE, LITERAL_TRY, LITERAL_CATCH, LITERAL_FINALLY,
+                LITERAL_DO, LITERAL_IF, LITERAL_ELSE, LITERAL_FOR,
+                INSTANCE_INIT, STATIC_INIT, LITERAL_SWITCH,
+                LITERAL_SYNCHRONIZED, LITERAL_CASE, LITERAL_DEFAULT, ARRAY_INIT,
+            "/>
+        </module>
+        <!-- Deliberately excluding module: <module name="EmptyCatchBlock"/> -->
+        <module name="LeftCurly">
+            <property name="ignoreEnums" value="false"/><!-- Factory is "true". -->
+            <property name="option" value="nl"/><!-- Factory is "eol". -->
+        </module>
+        <module name="NeedBraces"/>
+        <module name="RightCurly">
+            <property name="option" value="alone"/><!-- Factory is "same". -->
+        </module>
+
+        <!-- CLASS DESIGN -->
+        <!-- Deliberately excluding module: <module name="DesignForExtension"/> -->
+        <module name="FinalClass"/>
+        <module name="HideUtilityClassConstructor"/>
+        <module name="InnerTypeLast"/>
+        <module name="InterfaceIsType"/>
+        <module name="MutableException"/>
+        <module name="OneTopLevelClass"/>
+        <!-- Deliberately excluding module: <module name="ThrowsCount"/> -->
+        <module name="VisibilityModifier">
+            <property name="allowPublicFinalFields" value="true"/><!-- Factory is "false". -->
+        </module>
+
+        <!-- CODING -->
+        <module name="ArrayTrailingComma"/>
+        <!-- Deliberately excluding module: <module name="AvoidDoubleBraceInitialization"/> -->
+        <!-- Deliberately excluding module: <module name="AvoidInlineConditionals"/> -->
+        <module name="AvoidNoArgumentSuperConstructorCall"/>
+        <module name="CovariantEquals"/>
+        <!-- Deliberately excluding module: <module name="DeclarationOrder"/> -->
+        <module name="DefaultComesLast"/>
+        <module name="EmptyStatement"/>
+        <module name="EqualsAvoidNull"/>
+        <module name="EqualsHashCode"/>
+        <module name="ExplicitInitialization"/>
+        <module name="FallThrough"/>
+        <module name="FinalLocalVariable">
+            <property name="tokens" value="VARIABLE_DEF,PARAMETER_DEF"/><!-- Factory is "VARIABLE_DEF". -->
+            <property name="validateEnhancedForLoopVariable" value="true"/><!-- Factory is "false". -->
+        </module>
+        <!-- Deliberately excluding module: <module name="HiddenField"/> -->
+        <module name="IllegalCatch"/>
+        <module name="IllegalInstantiation"/>
+        <module name="IllegalThrows"/>
+        <module name="IllegalToken"/>
+        <module name="IllegalTokenText"/>
+        <module name="IllegalType"/>
+        <module name="InnerAssignment"/>
+        <module name="MagicNumber">
+            <property name="ignoreNumbers" value="-1, 0, 1, 2"/><!-- Factory is "-1, 0, 1, 2". -->
+        </module>
+        <!-- Deliberately excluding module: <module name="MatchXpath"/> -->
+        <!-- Deliberately excluding module: <module name="MissingCtor"/> -->
+        <module name="MissingSwitchDefault"/>
+        <module name="ModifiedControlVariable"/>
+        <!-- Deliberately excluding module: <module name="MultipleStringLiterals"/> -->
+        <module name="MultipleVariableDeclarations"/>
+        <!-- Deliberately excluding module: <module name="NestedForDepth"/> -->
+        <!-- Deliberately excluding module: <module name="NestedIfDepth"/> -->
+        <!-- Deliberately excluding module: <module name="NestedTryDepth"/> -->
+        <!-- Deliberately excluding module: <module name="NoArrayTrailingComma"/> -->
+        <module name="NoClone"/>
+        <!-- Deliberately excluding module: <module name="NoEnumTrailingComma"/> -->
+        <module name="NoFinalizer"/>
+        <module name="OneStatementPerLine"/>
+        <module name="OverloadMethodsDeclarationOrder"/>
+        <module name="PackageDeclaration"/>
+        <module name="ParameterAssignment"/>
+        <module name="RequireThis"/>
+        <!-- Deliberately excluding module: <module name="ReturnCount"/> -->
+        <module name="SimplifyBooleanExpression"/>
+        <module name="SimplifyBooleanReturn"/>
+        <module name="StringLiteralEquality"/>
+        <module name="SuperClone"/>
+        <module name="SuperFinalize"/>
+        <!-- Deliberately excluding module: <module name="UnnecessaryParentheses"/> -->
+        <module name="UnnecessarySemicolonAfterOuterTypeDeclaration"/>
+        <module name="UnnecessarySemicolonAfterTypeMemberDeclaration"/>
+        <module name="UnnecessarySemicolonInEnumeration"/>
+        <module name="UnnecessarySemicolonInTryWithResources"/>
+        <!-- Deliberately excluding module: <module name="VariableDeclarationUsageDistance"/> -->
+
+        <!-- IMPORTS -->
+        <module name="AvoidStarImport"/>
+        <module name="AvoidStaticImport">
+            <property name="excludes"
+                      value="org.junit.jupiter.api.Assertions.*"
+            /><!-- Factory is "". -->
+        </module>
+        <module name="CustomImportOrder">
+            <property name="customImportOrderRules"
+                      value="SAME_PACKAGE(2)###STANDARD_JAVA_PACKAGE###THIRD_PARTY_PACKAGE###STATIC"
+            /><!-- Factory is "". -->
+            <property name="separateLineBetweenGroups" value="true"/><!-- Factory is "true". -->
+            <property name="sortImportsInGroupAlphabetically" value="true"/><!-- Factory is "false". -->
+        </module>
+        <module name="IllegalImport"/>
+        <module name="ImportControl">
+            <property name="file" value="import-control.xml"/><!-- Factory is null and it crashes. -->
+        </module>
+        <!-- Deliberately excluding module: <module name="ImportOrder"/> -->
+        <module name="RedundantImport"/>
+        <module name="UnusedImports"/>
+
+        <!-- JAVADOC COMMENTS -->
+        <module name="AtclauseOrder"/>
+        <module name="InvalidJavadocPosition"/>
+        <module name="JavadocBlockTagLocation"/>
+        <module name="JavadocContentLocation"/>
+        <module name="JavadocMethod">
+            <property name="allowedAnnotations" value="Override, ParameterizedTest, Test"/><!-- Factory is "Override". -->
+            <property name="allowMissingParamTags" value="false"/><!-- Factory is "false". -->
+            <property name="allowMissingReturnTag" value="false"/><!-- Factory is "false". -->
+            <property name="scope" value="anoninner"/><!-- Factory is "private". -->
+            <property name="validateThrows" value="true"/><!-- Factory is "false". -->
+        </module>
+        <module name="JavadocMissingLeadingAsterisk"/>
+        <module name="JavadocMissingWhitespaceAfterAsterisk"/>
+        <module name="JavadocParagraph"/>
+        <!-- Deliberately excluding module: <module name="JavadocStyle"/> -->
+        <module name="JavadocTagContinuationIndentation"/>
+        <module name="JavadocType"/>
+        <!-- Deliberately excluding module: <module name="JavadocVariable"/> -->
+        <!-- Deliberately excluding module: <module name="MissingJavadocMethod"/> -->
+        <module name="MissingJavadocPackage"/>
+        <!-- Deliberately excluding module: <module name="MissingJavadocType"/> -->
+        <module name="NonEmptyAtclauseDescription"/>
+        <!-- Deliberately excluding module: <module name="RequireEmptyLineBeforeBlockTagGroup"/> -->
+        <module name="SingleLineJavadoc"/>
+        <!-- Deliberately excluding module: <module name="SummaryJavadoc"/> -->
+        <!-- Deliberately excluding module: <module name="WriteTag"/> -->
+
+        <!-- METRICS -->
+        <!-- Deliberately excluding module: <module name="BooleanExpressionComplexity"/> -->
+        <!-- Deliberately excluding module: <module name="ClassDataAbstractionCoupling"/> -->
+        <!-- Deliberately excluding module: <module name="ClassFanOutComplexity"/> -->
+        <!-- Deliberately excluding module: <module name="CyclomaticComplexity"/> -->
+        <!-- Deliberately excluding module: <module name="JavaNCSS"/> -->
+        <!-- Deliberately excluding module: <module name="NPathComplexity"/> -->
+
+        <!-- MISCELLANEOUS -->
+        <module name="ArrayTypeStyle"/>
+        <module name="AvoidEscapedUnicodeCharacters"/>
+        <module name="CommentsIndentation"/>
+        <module name="DescendantToken"/>
+        <module name="FinalParameters">
+            <property name="ignorePrimitiveTypes" value="false"/><!-- Factory is "false". -->
+            <property name="tokens" value="
+                METHOD_DEF, CTOR_DEF, LITERAL_CATCH, FOR_EACH_CLAUSE,
+            "/><!-- All tokens are chosen; factory is a proper subset of these. -->
+        </module>
+        <module name="Indentation">
+            <property name="arrayInitIndent" value="4"/><!-- Factory is "4". -->
+            <property name="basicOffset" value="4"/><!-- Factory is "4". -->
+            <property name="braceAdjustment" value="0"/><!-- Factory is "0". -->
+            <property name="caseIndent" value="4"/><!-- Factory is "4". -->
+            <property name="forceStrictCondition" value="false"/><!-- Factory is "false". -->
+            <property name="lineWrappingIndentation" value="4"/><!-- Factory is "4". -->
+            <property name="throwsIndent" value="4"/><!-- Factory is "4". -->
+        </module>
+        <module name="NoCodeInFile"/>
+        <module name="OuterTypeFilename"/>
+        <!-- Deliberately excluding module: <module name="TodoComment"/> -->
+        <module name="TrailingComment">
+            <property name="format" value="^ *$"/><!-- Factory is "^[\s});]*$". -->
+        </module>
+        <module name="UncommentedMain"/>
+        <module name="UpperEll"/>
+
+        <!-- MODIFIERS -->
+        <!-- Deliberately excluding module: <module name="ClassMemberImpliedModifier"/> -->
+        <!-- Deliberately excluding module: <module name="InterfaceMemberImpliedModifier"/> -->
+        <module name="ModifierOrder"/>
+        <module name="RedundantModifier"/>
+
+        <!-- NAMING CONVENTIONS -->
+        <!-- Deliberately excluding module: <module name="AbbreviationAsWordInName"/> -->
+        <module name="AbstractClassName">
+            <property name="format" value="^[A-Z].+$"/><!-- Factory is "^Abstract.+$". -->
+            <property name="ignoreModifier" value="true"/><!-- Factory is "false". -->
+        </module>
+        <!-- Deliberately excluding module: <module name="CatchParameterName"/> -->
+        <module name="ClassTypeParameterName"/>
+        <!-- Deliberately excluding module: <module name="ConstantName"/> -->
+        <module name="IllegalIdentifierName"/>
+        <module name="InterfaceTypeParameterName"/>
+        <!-- Deliberately excluding module: <module name="LambdaParameterName"/> -->
+        <!-- Deliberately excluding module: <module name="LocalFinalVariableName"/> -->
+        <!-- Deliberately excluding module: <module name="LocalVariableName"/> -->
+        <!-- Deliberately excluding module: <module name="MemberName"/> -->
+        <!-- Deliberately excluding module: <module name="MethodName"/> -->
+        <module name="MethodTypeParameterName"/>
+        <!-- Deliberately excluding module: <module name="PackageName"/> -->
+        <!-- Deliberately excluding module: <module name="ParameterName"/> -->
+        <!-- Deliberately excluding module: <module name="PatternVariableName"/> -->
+        <!-- Deliberately excluding module: <module name="RecordComponentName"/> -->
+        <module name="RecordTypeParameterName"/>
+        <!-- Deliberately excluding module: <module name="StaticVariableName"/> -->
+        <module name="TypeName">
+            <property name="format" value="^[A-Z].+$"/><!-- Factory is "^[A-Z][a-zA-Z0-9]*$". -->
+        </module>
+
+        <!-- REGEXP -->
+        <!-- Deliberately excluding module: <module name="Regexp"/> -->
+        <!-- Deliberately excluding module: <module name="RegexpSinglelineJava"/> -->
+
+        <!-- SIZE VIOLATIONS -->
+        <!-- Deliberately excluding module: <module name="AnonInnerLength"/> -->
+        <!-- Deliberately excluding module: <module name="ExecutableStatementCount"/> -->
+        <!-- Deliberately excluding module: <module name="LambdaBodyLength"/> -->
+        <!-- Deliberately excluding module: <module name="MethodCount"/> -->
+        <module name="MethodLength"/>
+        <module name="OuterTypeNumber"/>
+        <!-- Deliberately excluding module: <module name="ParameterNumber"/> -->
+        <!-- Deliberately excluding module: <module name="RecordComponentNumber"/> -->
+
+        <!-- WHITESPACE -->
+        <module name="EmptyForInitializerPad"/>
+        <module name="EmptyForIteratorPad"/>
+        <module name="EmptyLineSeparator">
+            <property name="allowMultipleEmptyLines" value="false"/><!-- Factory is "true". -->
+            <property name="allowMultipleEmptyLinesInsideClassMembers" value="false"/><!-- Factory is "true". -->
+            <property name="allowNoEmptyLineBetweenFields" value="true"/><!-- Factory is "false". -->
+        </module>
+        <module name="GenericWhitespace"/>
+        <module name="MethodParamPad"/>
+        <module name="NoLineWrap"/>
+        <module name="NoWhitespaceAfter"/>
+        <module name="NoWhitespaceBefore">
+            <property name="allowLineBreaks" value="true"/><!-- Factory is "false". -->
+            <property name="tokens" value="
+                COMMA, SEMI, POST_INC, POST_DEC, DOT, GENERIC_START,
+                GENERIC_END, ELLIPSIS, LABELED_STAT, METHOD_REF,
+            "/><!-- All tokens are chosen; factory is a proper subset of these. -->
+        </module>
+        <module name="OperatorWrap">
+            <property name="option" value="nl"/><!-- Factory is "nl". -->
+            <property name="tokens" value="
+                QUESTION, COLON, EQUAL, NOT_EQUAL, DIV, PLUS, MINUS, STAR,
+                MOD, SR, BSR, GE, GT, SL, LE, LT, BXOR, BOR, LOR, BAND,
+                LAND, LITERAL_INSTANCEOF, TYPE_EXTENSION_AND, ASSIGN,
+                DIV_ASSIGN, PLUS_ASSIGN, MINUS_ASSIGN, STAR_ASSIGN,
+                MOD_ASSIGN, SR_ASSIGN, BSR_ASSIGN, SL_ASSIGN, BXOR_ASSIGN,
+                BOR_ASSIGN, BAND_ASSIGN, METHOD_REF,
+            "/><!-- All tokens are chosen; factory is a proper subset of these. -->
+        </module>
+        <module name="ParenPad"/>
+        <module name="SeparatorWrap">
+            <property name="id" value="SeparatorWrap_eol"/>
+            <property name="option" value="eol"/><!-- Factory is "eol". -->
+            <property name="tokens" value="
+                COMMA, SEMI, ELLIPSIS, ARRAY_DECLARATOR,
+            "/>
+        </module>
+        <module name="SeparatorWrap">
+            <property name="id" value="SeparatorWrap_nl"/>
+            <property name="option" value="nl"/><!-- Factory is "eol". -->
+            <property name="tokens" value="
+                DOT, AT, METHOD_REF,
+            "/>
+        </module>
+        <!-- Deliberately excluding module: <module name="SingleSpaceSeparator"/> -->
+        <module name="TypecastParenPad"/>
+        <module name="WhitespaceAfter"/>
+        <module name="WhitespaceAround"/>
+    </module>
+</module>
